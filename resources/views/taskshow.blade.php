@@ -16,6 +16,7 @@
             <tr>
                 <th>Title</th>
                 <th>Description</th>
+                <th>Status</th>
                 <th>Completion Date</th>
             </tr>
         </thead>
@@ -24,6 +25,7 @@
             <tr>
                 <td>{{ $task->title }}</td>
                 <td>{{ $task->description }}</td>
+                <td>{{ $task->completed == 1 ? "Complete":"Incomplete"}}</td>
                 <td>{{ $task->completed_at }}</td>
             </tr>
             @endforeach

@@ -31,6 +31,7 @@
                     <th>Title</th>
                     <th>Description</th>
                     <th>Priority</th>
+                    <th>Status</th>
                     <th>Due Date</th>
                     <th>Actions</th>
                 </tr>
@@ -41,6 +42,7 @@
                     <td>{{ $task->title }}</td>
                     <td>{{ $task->description }}</td>
                     <td>{{ $task->priority }}</td>
+                    <td>{{ $task->completed == 0 ? "Incomplete":"complete" }}</td>
                     <td>{{ $task->due_date }}</td>
                     <td>
                         <a href="{{ route('tasks.editpage',$task->id) }}" class="btn btn-primary btn-sm">
